@@ -1,53 +1,91 @@
 {
-    "name": "client",
-    "version": "0.1.0",
-    "private": true,
-    "proxy": "http://localhost:5000",
-    "dependencies": {
-        "@material-ui/core": "^4.12.4",
-        "@material-ui/icons": "^4.9.1",
-        "@material-ui/lab": "^4.0.0-alpha.58",
-        "@react-oauth/google": "^0.2.0",
-        "@testing-library/jest-dom": "^4.2.4",
-        "@testing-library/react": "^9.3.2",
-        "@testing-library/user-event": "^7.1.2",
-        "axios": "^0.19.2",
-        "deps": "^1.0.0",
-        "jwt-decode": "^3.1.2",
-        "material-ui-chip-input": "^1.1.0",
-        "moment": "^2.27.0",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
-        "react-file-base64": "^1.0.3",
-        "react-google-login": "^5.1.25",
-        "react-redux": "^7.2.8",
-        "react-router-dom": "^5.2.0",
-        "react-scripts": "3.4.1",
-        "redux": "^4.0.5",
-        "redux-thunk": "^2.3.0"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.58",
+    "@react-oauth/google": "^0.2.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "deps": "^1.0.0",
+    "jwt-decode": "^3.1.2",
+    "material-ui-chip-input": "^1.1.0",
+    "moment": "^2.27.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-file-base64": "^1.0.3",
+    "react-google-login": "^5.1.25",
+    "react-redux": "^7.2.8",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ],
+    "rules": {
+      "react/prop-types": "off",
+      "no-console": "off",
+      "no-shadow": "off",
+      "jsx-a11y/no-static-element-interactions": "off",
+      "jsx-a11y/click-events-have-key-events": "off",
+      "no-use-before-define": "warn",
+      "react/no-unstable-nested-components": "off",
+      "default-param-last": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "trailingComma": "es5",
+          "singleQuote": true,
+          "printWidth": 120,
+          "tabWidth": 4
+        }
+      ]
     }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-transform-react-jsx-self": "^7.16.7",
+    "@babel/plugin-transform-react-jsx-source": "^7.16.7",
+    "@babel/preset-react": "^7.16.7",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-wesbos": "^3.0.2",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "prettier": "^2.6.2"
+  }
 }
