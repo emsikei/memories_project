@@ -20,8 +20,8 @@ app.use('/users', userRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-let request = supertest(app);
-let isInTestMode = typeof process.env.NODE_ENV === 'string' && process.env.NODE_ENV.toLowerCase() === 'test';
+const request = supertest(app);
+const isInTestMode = typeof process.env.NODE_ENV === 'string' && process.env.NODE_ENV.toLowerCase() === 'test';
 if (!isInTestMode) {
         mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
                 .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
